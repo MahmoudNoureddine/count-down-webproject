@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --dark-blue: #5175ff;
+  --light-blue: #829cff;
+  --very-dark-gray: #333950;
+  --bg-color: #25293a;
+  --gray-color: #747b95;
+  --orange-red-color: #f05b5b;
+  --font-family: "Kumbh Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: rgba(249, 249, 249, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--dark-blue);
+  border: none;
+  border-radius: 20px;
+}
+
+.wrapper {
+  height: 100vh;
+  padding: 20px;
+}
+
+/*starting with mobile first 375px (Start)*/
+@media (max-width: 375px) {
+  .wrapper .head-section {
+    width: 300px;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: auto;
+  }
+
+  .head-section .charts {
+    width: 200px;
+    height: 200px;
+  }
+
+  .head-section::before {
+    content: "";
+    width: 100%;
+    height: 80%;
+    background-image: url("/starter-code/assets/home/bg-pattern-header.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+    top: -50%;
+  }
+
+  .head-section .logo-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .charts img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .head-section .text-container {
+    width: 327px;
+    text-align: center;
+  }
+
+  .text-container h1 {
+    font-size: 40px;
+  }
+
+  .text-container p {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: var(--gray-color);
+  }
+
+  .text-container button {
+    margin-top: 10px;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  .price-sections {
+    width: 100%;
+    height: 200vh;
+    min-height: 200vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 20px;
+    background: linear-gradient(
+      rgba(249, 249, 249, 0.5) 0%,
+      rgba(249, 249, 249, 0.5) 50%,
+      var(--bg-color) 50%,
+      var(--bg-color) 100%
+    );
+  }
+
+  .price {
+    width: 300px;
+    height: 70vh;
+
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: white;
+
+    margin: auto;
+  }
+
+  .price .price-type {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .price h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .basic button {
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    font-weight: bold;
+  }
+
+  .basic {
+    z-index: 100;
+  }
+
+  .price .benefits {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--gray-color);
+  }
+
+  .price.pro {
+    background-color: var(--dark-blue);
+    color: white !important;
+    position: relative;
+  }
+
+  .price.pro::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("/starter-code/assets/home/bg-pattern-pricing.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -40%;
+    z-index: ;
+    overflow-y: hidden;
+  }
+
+  .pro .benefits {
+    color: white;
+  }
+
+  .pro button {
+    background-color: lightgrey;
+    color: var(--light-blue);
+    font-weight: bold;
+  }
+
+  .unlimate {
+    background-color: rgba(250, 250, 250, 0.9);
+    margin-bottom: 20px;
+  }
+
+  /* countdown part start */
+
+  .count-down {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .count-down .count {
+    width: 80%;
+    height: 70px;
+    background-color: var(--gray-color);
+    margin: auto;
+  }
+
+  /* countdown part end */
+}
+
+/*starting with mobile first 375px (End)*/
